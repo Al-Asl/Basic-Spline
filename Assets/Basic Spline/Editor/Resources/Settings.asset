@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1eb4b4ea58c2f44bb8749dca06cf5ec, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  settings:
+    drawSettings:
+      resolution: 30
+      shape: 0
+      ColorA: {r: 0.41566885, g: 1, b: 0, a: 1}
+      ColorB: {r: 1, g: 0.74409664, b: 0.015686274, a: 1}
+      width: 0.2
+    tangentColor: {r: 0, g: 0, b: 0, a: 1}
+    localEdit: 0
+    relativeTangentEdit: 0
+    smartHandleMode: 1
+    fallBack: 1
+    RayCastToSceneGeomatry: 1
+    PrioritizeOnSelection: 1
+    lockTangentByDefault: 1
+    showAngleHandle: 1
+    showTangents: 1
+    screenSpaceIcon: 1
+    contextMenuButtonSize: 35
+    controlPointIconSize: 20
