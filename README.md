@@ -1,6 +1,6 @@
 ## Basic-Spline
 
-<img src="documentation/images/main_image.png" width="900px"/>
+<img src="documentation/images/main_image.png"/>
 
 An intuitive and lightweight path for Unity.
 
@@ -57,7 +57,7 @@ to create a path, go to `GameObject/Path/Path`. By coding, you can either use th
 you can sample the curve by the arc length using `Spline.GetPoint`, 
 you can also go from the arc length to the curve parameter or the other way around using `Segment.EvaluateParameter` and `Segment.EvaluateLength`.
 
-<img src="documentation/images/spline_distance_set.gif" width="900px"/>
+<img src="documentation/images/spline_distance_set.gif"/>
 
 * To approximate the arc length, this package uses [Approximate Arc Length Parametrization MARCELO WALTER ,AND ALAIN FOURNIER]
 * I tried to find the inverse for arc length approximation, but the error margin was too big, so I stuck to root-finding on [Arc Length Approximation] using hybrid Newton's method.
@@ -66,7 +66,7 @@ you can also go from the arc length to the curve parameter or the other way arou
 ## finding the closest point
 to get the closest point on the spline to the given point, use `Spline.GetClosestLength`. This method will return the arc length from the beginning of the spline to the closest point. You can use it with conjunction `Spline.GetPoint` to get the closest point.
 
-<img src="documentation/images/spline_closest_point.gif" width="900px"/>
+<img src="documentation/images/spline_closest_point.gif"/>
 
 * To find the closest point, this package uses [ Xiao-Diao Chen, Yin Zhou, Zhenyu Shu, Hua Su, Jean-Claude Paul. Improved Algebraic Algorithm On Point Projection For Bézier Curves. HAL, 2007 ]
 * And for roots finding, it uses the hybrid Newton's method.
