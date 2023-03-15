@@ -18,7 +18,7 @@ Complete C# source code is provided.
 
 to create a path, go to `GameObject/Path/Path`. By coding, you can either use the `Path` class or the `Spline` class, the `Path` is a `MonoBehaviour` and it's only a wrapper for the `Spline` class.
 ```csharp
-	//generating spline
+        //generating spline
 
         ControlPoint[] controlPoints = new ControlPoint[]
         {
@@ -41,15 +41,13 @@ to create a path, go to `GameObject/Path/Path`. By coding, you can either use th
         }
 
         //operating on segments
-
-        for (int i = 0; i < spline.SegmentCount; i++)
+        foreach(var segment in spline.IterateSegments())
         {
-            var segment = spline[i];
             //Iterate over the segment points in fixed parametric steps.
-            segment.Iterate(excute: (point) =>
+            foreach (var point in segment.IteratePoints(30))
             {
                 //do something with point ..
-            }, 30);
+            }
         }
 ```
 

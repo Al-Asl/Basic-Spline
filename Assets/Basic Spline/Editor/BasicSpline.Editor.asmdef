@@ -1,0 +1,20 @@
+{
+    "name": "BasicSpline.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7f22184015f381a4f834e426b3f69927",
+        "GUID:f1f735c9043cc4d4fb4a32e77deeb8d1",
+        "GUID:eaf7262b73e058546a37f9d5420141b0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

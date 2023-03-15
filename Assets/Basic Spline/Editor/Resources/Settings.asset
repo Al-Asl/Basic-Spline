@@ -18,12 +18,12 @@ MonoBehaviour:
       shape: 0
       ColorA: {r: 0.41566885, g: 1, b: 0, a: 1}
       ColorB: {r: 1, g: 0.74409664, b: 0.015686274, a: 1}
-      width: 0.2
+      width: 0.95
     tangentColor: {r: 0, g: 0, b: 0, a: 1}
-    localEdit: 0
+    localEdit: 1
     relativeTangentEdit: 0
     smartHandleMode: 1
-    fallBack: 1
+    fallBack: 0
     RayCastToSceneGeomatry: 1
     PrioritizeOnSelection: 1
     lockTangentByDefault: 1
