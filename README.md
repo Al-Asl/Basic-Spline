@@ -2,7 +2,7 @@
 
 <img src="documentation/images/main_image.png"/>
 
-An intuitive and lightweight path for Unity.
+An intuitive and lightweight path editor for Unity.
 
 This package was built with two goals in mind. The first is to keep everything simple by keeping a clean UI and a simple API that only implements the basic spline functionality. The second goal is to implement analytical methods for curve sampling to avoid point caching.
 
@@ -16,6 +16,10 @@ Complete C# source code is provided.
 
 # Usage
 
+Clone the repo with submodules using the following command:
+```
+git clone --recurse-submodules https://github.com/Al-Asl/Basic-Spline.git
+```
 to create a path, go to `GameObject/Path/Path`. By coding, you can either use the `Path` class or the `Spline` class, the `Path` is a `MonoBehaviour` and it's only a wrapper for the `Spline` class.
 ```csharp
         //generating spline
