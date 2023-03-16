@@ -22,6 +22,11 @@ namespace BasicSpline
             transformedSpline = new TransformedSpline(spline, transform);
         }
 
+        private void OnValidate()
+        {
+            OnEnable();
+        }
+
         /// <summary>
         /// set the path to loop
         /// </summary>

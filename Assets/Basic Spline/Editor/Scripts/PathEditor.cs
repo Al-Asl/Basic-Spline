@@ -170,9 +170,11 @@ namespace BasicSpline
 
         private void OnDisable()
         {
-            if ((Selection.activeObject == null || settings.PrioritizeOnSelection)
+            if ((Selection.activeObject == null || settings.PrioritizeOnSelection) 
                 && !singlePointSelected && mouseInsideWindow)
                 Selection.activeObject = target;
+            else
+                Tools.current = tool;
 
             path?.Dispose();
 
@@ -445,10 +447,10 @@ namespace BasicSpline
 
                 if (addingTool.IsActive)
                     addingTool.Stop();
+                else
+                    Tools.current = tool;
 
-                Tools.current = tool;
                 SceneView.RepaintAll();
-
                 return;
             }
 
@@ -765,7 +767,12 @@ namespace BasicSpline
                 position = GetSelectedPointsCenter();
 
                 //remove points button
-                buttons.Add(((GUIStyle, System.Action))(resource.delete_button_style, RemoveSelectedPoints));
+                buttons.Add(((GUIStyle, System.Action))(resource.delete_button_style,()=>
+                { 
+                    RemoveSelectedPoints();
+                    Tools.current = tool;
+                }
+                ));
 
                 //lock tangent button
                 TangentMode tanMode = spline.GetControlPoint(selectedPoints[0]).editor_only_tangent_mode;
@@ -820,7 +827,10 @@ namespace BasicSpline
         private void DrawContextMenu(Rect rect, List<(GUIStyle, System.Action)> buttons)
         {
             if (Event.current.type == EventType.Layout && rect.Contains(Event.current.mousePosition))
+            {
+                HandleUtility.AddControl(0, 0);
                 SceneView.RepaintAll();
+            }
 
             Handles.BeginGUI();
             GUILayout.BeginArea(rect, GUI.skin.box);
